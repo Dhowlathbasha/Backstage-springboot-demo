@@ -1,11 +1,3 @@
-FROM eclipse-temurin:17-jdk-jammy
-
-WORKDIR /app
-
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-#RUN ./mvnw
-
-COPY src ./src
-
-CMD ["./mvnw", "spring-boot:run"]
+FROM openjdk:17
+ADD target/github-action.jar github-action.jar
+ENTRYPOINT ["java","-jar","/github-action.jar"]
