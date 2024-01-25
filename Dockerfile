@@ -1,3 +1,3 @@
 FROM openjdk:17
-ADD target/github-action.jar github-action.jar
-ENTRYPOINT ["java","-jar","/github-action.jar"]
+ADD target/spring-boot-swagger3-sample-0.0.1-SNAPSHOT.jar spring-boot-swagger3-sample-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/spring-boot-swagger3-sample-0.0.1-SNAPSHOT.jar"]
